@@ -13,12 +13,26 @@ public class U1L02NumNickCalc {
 		
 		//System.out.println(userMoney);
 		
-		int numbNicks = userMoney/5;
-		int numbPens = userMoney - (numbNicks*5);
+		int numbQuarts= userMoney/25;
+		int leftover = userMoney % 25;
+		int numbDimes= leftover/ 10;
+		int leftover2= leftover % 10;
+		int numbNicks= leftover2/5;
+		int numbPennies= leftover2 % 5;
+		//int numbQuarts= userMoney/25;
+		//int leftover= userMoney- (numbQuarts*25);
+	
+		//int numbDimes= leftover/10;
+		//int leftover2= leftover- (numbDimes*10);
 		
-		JOptionPane.showMessageDialog(null, userMoney + " cents is"
+		//int numbNicks = leftover2/5;
+		//int numbPens = leftover2 - (numbNicks*5);
+		
+		JOptionPane.showMessageDialog(null, userMoney + " cents is "
+				+ numbQuarts + "quarters and"
+				+ numbDimes + "dimes and"
 				+ numbNicks + " nickels and "
-				+ numbPens + " pennies.");
+				+ numbPennies + " pennies.");
 		
 
 	}
